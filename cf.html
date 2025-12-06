@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <title>Conversational Form</title>
+
+  <!-- ✅ Conversational Form CSS (DETTA SAKNADES) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.css">
+
+  <!-- ✅ Conversational Form JS -->
   <script src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js"></script>
+
   <style>
     body {
       margin: 0;
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: white;
     }
 
     #cf-context {
@@ -21,10 +28,25 @@
   <div id="cf-context"></div>
 
   <form id="my-form" style="display:none;">
-    <input type="text" name="name" cf-questions="Vad heter du?" required />
-    <input type="email" name="email" cf-questions="Vad är din e-post?" required />
+    <input 
+      type="text" 
+      name="name" 
+      cf-questions="Vad heter du?" 
+      required 
+    />
 
-    <select name="topic" cf-questions="Vad gäller din förfrågan?" required>
+    <input 
+      type="email" 
+      name="email" 
+      cf-questions="Vad är din e-post?" 
+      required 
+    />
+
+    <select 
+      name="topic" 
+      cf-questions="Vad gäller din förfrågan?" 
+      required
+    >
       <option value="brand">Varumärke</option>
       <option value="web">Webb</option>
       <option value="strategy">Strategi</option>
@@ -44,3 +66,4 @@
 
 </body>
 </html>
+
